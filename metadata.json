@@ -1,0 +1,16 @@
+{
+  "numeric_cols": [
+    "Year Operational",
+    "Dairy"
+  ],
+  "categorical_cols": [
+    "Project Type",
+    "City",
+    "County",
+    "State",
+    "Digester Type",
+    "Animal/Farm Type(s)",
+    "Biogas End Use(s)"
+  ],
+  "target_transform": "log1p"
+}
