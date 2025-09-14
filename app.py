@@ -5,8 +5,13 @@ import joblib
 
 # Load trained model pipeline
 # Make sure 'xgb_model_pipeline.pkl' is in the same directory as your app.py file
+import pickle
+import os
+import streamlit as st # Make sure streamlit is imported
+
 try:
-    model_pipeline = joblib.load("xgb_model_pipeline.pkl")
+    with open("xgb_model_pipeline_pickle.pkl", "rb") as f:
+        model_pipeline = pickle.load(f)
 except Exception as e:
     st.error(f"Error loading the model: {e}")
     st.stop()
